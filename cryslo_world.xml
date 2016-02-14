@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cryslo_world" default="all">
+  
+  
+  <property file="cryslo_world.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.gradle:_aopalliance:aopalliance:1.0.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.flowpowered:flow-math:1.0.1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.flowpowered/flow-math/1.0.1/4f4c8b81032466f01d85925364dd633475a6e1ea/flow-math-1.0.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.flowpowered:flow-noise:1.0.1-snapshot.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.flowpowered/flow-noise/1.0.1-SNAPSHOT/bfddff85287441521fb66ec22b59a463190966e1/flow-noise-1.0.1-SNAPSHOT.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.findbugs:jsr305:1.3.9.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.gson:gson:2.2.4.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.guava:guava:17.0.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.inject:guice:4.0.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.0/f990a43d3725781b6db7cd0acf0a8b62dfd1649/guice-4.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.typesafe:config:1.3.0.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.3.0/f533aa6ea13e443b50e639d070986c42d03efc35/config-1.3.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_javax.inject:javax.inject:1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_junit:junit:4.11.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar"/>
+  </path>
+  
+  <path id="library.gradle:_ninja.leaping.configurate:configurate-core:3.1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/ninja.leaping.configurate/configurate-core/3.1/a835d1aa4164f8407c01c6a5a2941045edf7de2d/configurate-core-3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_ninja.leaping.configurate:configurate-gson:3.1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/ninja.leaping.configurate/configurate-gson/3.1/ab2a999e58d77756fad57d437bd3f06b60e1d2d0/configurate-gson-3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_ninja.leaping.configurate:configurate-hocon:3.1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/ninja.leaping.configurate/configurate-hocon/3.1/3c8f13a1d7c64ab11f008076f6eca858ba5c166d/configurate-hocon-3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_ninja.leaping.configurate:configurate-yaml:3.1.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/ninja.leaping.configurate/configurate-yaml/3.1/4c16ecb2962719c4f59053bbd441fbbe362c7442/configurate-yaml-3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.apache.commons:commons-lang3:3.3.2.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ow2.asm:asm:5.0.3.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.slf4j:slf4j-api:1.7.13.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.13/7fcf30c25b8f4a9379b9dad0d3f487b25272c026/slf4j-api-1.7.13.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.spongepowered:event-gen-core:0.10-snapshot.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.spongepowered/event-gen-core/0.10-SNAPSHOT/3357a6df440f50db3bfe6f8f9f8045e953c5021e/event-gen-core-0.10-SNAPSHOT.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.spongepowered:spongeapi:3.0.0.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.spongepowered/spongeapi/3.0.0/e630c2bbba2d48932242913b97f5c326f2f7de6e/spongeapi-3.0.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.yaml:snakeyaml:1.16.classpath">
+    <pathelement location="C:/Users/rosse/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.16/d64fb662c9e42789149f5078a62a22edda786c6a/snakeyaml-1.16.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_cryslo_world.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.cryslo_world" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.cryslo_world" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

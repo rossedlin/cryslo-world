@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cryslo_world" default="compile.module.cryslo_world">
+  <dirname property="module.cryslo_world.basedir" file="${ant.file.module_cryslo_world}"/>
+  
+  <property name="module.jdk.home.cryslo_world" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cryslo_world" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cryslo_world" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cryslo_world" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="cryslo_world.output.dir" value="${module.cryslo_world.basedir}/build/classes/main"/>
+  <property name="cryslo_world.testoutput.dir" value="${module.cryslo_world.basedir}/build/classes/test"/>
+  
+  <path id="cryslo_world.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cryslo_world.module.production.classpath">
+    <path refid="${module.jdk.classpath.cryslo_world}"/>
+    <path refid="library.gradle:_org.spongepowered:spongeapi:3.0.0.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-math:1.0.1.classpath"/>
+    <path refid="library.gradle:_org.ow2.asm:asm:5.0.3.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-yaml:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.gradle:_com.google.inject:guice:4.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.2.4.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-gson:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:17.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.13.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-noise:1.0.1-snapshot.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:event-gen-core:0.10-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-hocon:3.1.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-core:3.1.classpath"/>
+    <path refid="library.gradle:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.0.classpath"/>
+  </path>
+  
+  <path id="cryslo_world.runtime.production.module.classpath">
+    <pathelement location="${cryslo_world.output.dir}"/>
+    <path refid="library.gradle:_org.spongepowered:spongeapi:3.0.0.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-math:1.0.1.classpath"/>
+    <path refid="library.gradle:_org.ow2.asm:asm:5.0.3.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-yaml:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.gradle:_com.google.inject:guice:4.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.2.4.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-gson:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:17.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.13.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-noise:1.0.1-snapshot.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:event-gen-core:0.10-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-hocon:3.1.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-core:3.1.classpath"/>
+    <path refid="library.gradle:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.0.classpath"/>
+  </path>
+  
+  <path id="cryslo_world.module.classpath">
+    <path refid="${module.jdk.classpath.cryslo_world}"/>
+    <pathelement location="${cryslo_world.output.dir}"/>
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:spongeapi:3.0.0.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-math:1.0.1.classpath"/>
+    <path refid="library.gradle:_org.ow2.asm:asm:5.0.3.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-yaml:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.gradle:_com.google.inject:guice:4.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.2.4.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-gson:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:17.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.13.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-noise:1.0.1-snapshot.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:event-gen-core:0.10-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-hocon:3.1.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-core:3.1.classpath"/>
+    <path refid="library.gradle:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.0.classpath"/>
+  </path>
+  
+  <path id="cryslo_world.runtime.module.classpath">
+    <pathelement location="${cryslo_world.testoutput.dir}"/>
+    <pathelement location="${cryslo_world.output.dir}"/>
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:spongeapi:3.0.0.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-math:1.0.1.classpath"/>
+    <path refid="library.gradle:_org.ow2.asm:asm:5.0.3.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-yaml:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.gradle:_com.google.inject:guice:4.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.2.4.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-gson:3.1.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:17.0.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.13.classpath"/>
+    <path refid="library.gradle:_com.flowpowered:flow-noise:1.0.1-snapshot.classpath"/>
+    <path refid="library.gradle:_org.spongepowered:event-gen-core:0.10-snapshot.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-hocon:3.1.classpath"/>
+    <path refid="library.gradle:_org.yaml:snakeyaml:1.16.classpath"/>
+    <path refid="library.gradle:_ninja.leaping.configurate:configurate-core:3.1.classpath"/>
+    <path refid="library.gradle:_javax.inject:javax.inject:1.classpath"/>
+    <path refid="library.gradle:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cryslo_world">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cryslo_world">
+    <patternset refid="excluded.from.module.cryslo_world"/>
+  </patternset>
+  
+  <path id="cryslo_world.module.sourcepath">
+    <dirset dir="${module.cryslo_world.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cryslo_world" depends="compile.module.cryslo_world.production,compile.module.cryslo_world.tests" description="Compile module cryslo_world"/>
+  
+  <target name="compile.module.cryslo_world.production" depends="register.custom.compilers" description="Compile module cryslo_world; production classes">
+    <mkdir dir="${cryslo_world.output.dir}"/>
+    <javac2 destdir="${cryslo_world.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cryslo_world}/javac">
+      <compilerarg line="${compiler.args.cryslo_world}"/>
+      <bootclasspath refid="cryslo_world.module.bootclasspath"/>
+      <classpath refid="cryslo_world.module.production.classpath"/>
+      <src refid="cryslo_world.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cryslo_world"/>
+    </javac2>
+    
+    <copy todir="${cryslo_world.output.dir}">
+      <fileset dir="${module.cryslo_world.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cryslo_world.tests" depends="register.custom.compilers,compile.module.cryslo_world.production" description="compile module cryslo_world; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cryslo_world" description="cleanup module">
+    <delete dir="${cryslo_world.output.dir}"/>
+    <delete dir="${cryslo_world.testoutput.dir}"/>
+  </target>
+</project>
